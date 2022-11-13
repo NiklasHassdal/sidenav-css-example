@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 14px;
+}
+
+h1 {
+    cursor: default;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#hamburger {
+    display: none;
+    position: fixed;
+    font-size: 2rem;
+    left: 0px;
+    top: 0px;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 3rem;
+    height: 100%;
+    background-color: #222;
+    filter: drop-shadow(0px 0px 4px #888);
+    transition: 0.2s;
+}
+
+#sidebar:hover {
+    width: 240px;
+}
+
+#sidebar>* {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#sidebar>h1 {
+    margin: 0;
+    padding: 0;
+    width: 0%;
+    line-height: 4rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 0.2s;
+}
+
+#sidebar:hover>h1 {
+    width: 100%;
+}
+
+#sidebar>a {
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    font-weight: bold;
+    background-color: #222;
+    color: #eee;
+    line-height: 3rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #444;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#sidebar>a:hover {
+    padding: 0 0 0 0.5rem;
+    background-color: #444;
+    color: #fff;
+}
+
+#sidebar>.selected {
+    border-left: 4px solid #08f;
+    color: #08f;
+    background-color: #333;
+}
+
+#sidebar>.selected>.material-symbols-outlined {
+    margin-left: -4px;
+}
+
+#sidebar>a>.material-symbols-outlined {
+    display: block;
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#content {
+    padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+}
+
+#content>h1 {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+@media screen and (max-width:900px) {
+    #hamburger {
+        display: block;
+    }
+
+    #sidebar {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        transition: 0s;
+    }
+
+    #sidebar:hover {
+        width: 100%;
+    }
+
+    #sidebar>h1 {
+        width: 100%;
+    }
+
+    #sidebar>a {
+        height: 0;
+        border: 0;
+    }
+
+    #sidebar:hover>a {
+        height: 3rem;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #444;
+    }
+
+    #content {
+        padding: 3.5rem 0.5rem 0.5rem 0.5rem;
+    }
+}
